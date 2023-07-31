@@ -39,7 +39,8 @@ const [show,setshow]=useState({
                     style={{left:"10%",top:"55%"}} 
                     onMouseEnter={()=>setshow((pre)=>{return {...pre,category:true}})} 
                     onMouseLeave={()=>setshow(false)}>
-                    <div>
+                        
+                    {/* <div>
                     {categories.map((val,index)=>{
                         return (
                             <>
@@ -48,7 +49,7 @@ const [show,setshow]=useState({
                             </>
                         )
                     })}
-                    </div>
+                    </div> */}
                 </div>
                 </>
                 :<></>
@@ -84,10 +85,10 @@ const [show,setshow]=useState({
                     onMouseLeave={()=>setshow(false)}
                     >Buyer
                     {show.buyer?
-                    <div className="categories sub-menu d-flex flex-wrap">
-                        <Navbar>    
+                    <div className="categories sub-menu d-flex">
+                        <Navbar className="d-block">    
                         <h2>Services</h2>                         
-                        <Nav.Link d-block> supplier 1 </Nav.Link>
+                        <Nav.Link> supplier 1 </Nav.Link>
                             <Nav.Link href="#"> new user guide </Nav.Link>
                             <Nav.Link href="#"> auditted supplier </Nav.Link>
                             <Nav.Link href="#"> meet suppliers </Nav.Link>
@@ -95,7 +96,7 @@ const [show,setshow]=useState({
                             <Nav.Link href="#"> buying center </Nav.Link>
                             <Nav.Link href="#"> contact us </Nav.Link>
                         </Navbar>
-                        <Navbar>       
+                        <Navbar className="d-block">       
                         <h2>Search</h2>                 
                         <Nav.Link> supplier 1 </Nav.Link>
                             <Nav.Link href="#"> supplier 2 </Nav.Link>
