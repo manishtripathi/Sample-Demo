@@ -87,7 +87,7 @@ const [show,setshow]=useState({
                     <div className="categories sub-menu d-flex flex-wrap">
                         <Navbar>    
                         <h2>Services</h2>                         
-                        <Nav.Link> supplier 1 </Nav.Link>
+                        <Nav.Link d-block> supplier 1 </Nav.Link>
                             <Nav.Link href="#"> new user guide </Nav.Link>
                             <Nav.Link href="#"> auditted supplier </Nav.Link>
                             <Nav.Link href="#"> meet suppliers </Nav.Link>
