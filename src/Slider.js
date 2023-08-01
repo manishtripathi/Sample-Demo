@@ -20,11 +20,11 @@ const SliderBanner = ()=>{
         <div>
           
           <Slider {...settings}>
-            {items.map((value,index)=>{
+            {items.map((val,index)=>{
               return(
                 <div>
                   <Nav.Link>
-                    <img src={process.env.PUBLIC_URL + value.image} alt={value.alt}/>
+                    <img src={process.env.PUBLIC_URL + val.image} alt={val.alt}/>
                   </Nav.Link>
             </div>
               )

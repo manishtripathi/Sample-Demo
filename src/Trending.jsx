@@ -10,11 +10,11 @@ const Trending = () => {
         
             {products.map((val,index)=>{
                 return (<>
-                <div className='product-container'>
+                <div className='product-container text-center ' >
                 <div className='product-container-image'>
                     <img src={val.image}/>
                 </div>
-                <p>{val.name}</p>
+                <p className='mt-3'>{val.name}</p>
                 </div>
                 </>)
             })}

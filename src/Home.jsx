@@ -81,7 +81,7 @@ const Home = () => {
             </div>
         </div>
         <div className='home-items'>
-            <h2>you may like</h2>
+            <h4>you may like</h4>
             {items.map((val,index)=>{
                 return (
                     <>
@@ -91,7 +91,7 @@ const Home = () => {
                         </div>
                         <div>
                         <p>{val.name}</p>
-                        <p>{val.products}</p>
+                        <p> <small className='txt-color'>{val.products}</small></p>
                         </div>
                     </div>
                     </>

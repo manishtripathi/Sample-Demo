@@ -251,12 +251,26 @@ h4{
 
   height: max-content;
 }
-.home-body-container{
+/* .home-body-container{
     background-image: linear-gradient(30deg, skyblue,rgb(250, 249, 249));
       text-align: justify;
     text-transform: capitalize;
     padding: 13% 4% 10% 12%;
     color: white;
+} */
+.slick-prev {
+  left: 0px !important;
+  z-index: 2;
+}
+.slick-next {
+  right: 0px !important;
+  z-index: 2;
+}
+.slick-prev, .slick-next{
+  display: none !important;
+}
+.slick-slider:hover .slick-prev, .slick-slider:hover .slick-next{
+  display: block !important;
 }
 .home-body-container button{
   width: max-content;
@@ -272,19 +286,21 @@ h4{
 }
 .item-box{
   text-align: justify;
-  width: 100%;
-    height: 65px;
+    width: 100%;
     display: flex;
-    flex-wrap: nowrap;
     align-items: center;
+    margin-top: 15px;
+    margin-bottom: 15px;
 }
 .item-box div p{
   margin: 0px;
   padding: 0px;
 }
+small.txt-color {
+  color: #a79898;
+}
 .image{
   width: 60px;
-  height: 60px;
   margin-right: 10px;
 }
 .image img{
