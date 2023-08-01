@@ -96,7 +96,7 @@ ul li{
 position: relative;
 cursor: pointer;
 }
-.second-section .navbar a{
+.second-section .navbar a, .first-section .navbar a{
   padding: 10px;
 }
 .sub-menu{
@@ -105,7 +105,6 @@ cursor: pointer;
   width: max-content;
   right: 2px;
   top: 42px;
-  margin: 10px;
   border-radius: 6px;
   box-shadow: #9b9090 0 0 6px 0px;
   z-index: 9;
@@ -171,21 +170,21 @@ cursor: pointer;
 .bottom-nav{
   /* height: 48px; */
     box-shadow: 0px 0 1px 1px #c9c9c9;
-    display: grid;
+    /* display: grid;
     grid-template-columns: 3fr 2fr;
     justify-content: space-between;
-    align-items: center;
+    align-items: center; */
 }
 p{
   width: max-content;
 }
-.first-section{
+/* .first-section{
   display: grid;
   grid-template-columns: 20% 80%;
   justify-content: space-between;
     align-items: center;
     position: relative;
-}
+} */
 
 .second-section ul,.first-section ul{
   list-style: none;
@@ -197,12 +196,12 @@ p{
 .bottom-nav ul li{
   margin: 0px 10px;
 }
-.second-section {
+/* .second-section {
   display: grid;
   justify-content: right;
   position: relative;
   margin-right: 20px;
-}
+} */
 .second-section li{
   position: relative;
 }
