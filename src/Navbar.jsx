@@ -13,7 +13,7 @@ const Navigation = () => {
   return (
     <div>
       <nav className='navbar pb-0 pt-0' style={{backgroundImage:".../images/"}}>
-      <Navbar bg="light" expand="lg">
+      <Navbar expand="lg" className='bgwht'>
             <Container fluid>
               
               <Navbar.Brand href="#home">MADE IN CHINA</Navbar.Brand>
@@ -36,8 +36,8 @@ const Navigation = () => {
              
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-              <Navbar.Collapse id="basic-navbar-nav justify-content-end">
-                <Nav className="me-auto custome-space">
+              <Navbar.Collapse id="basic-navbar-nav" className='d-flex justify-content-end'>
+                <Nav className="custome-space justify-content-end">
                   <Link 
                   to="/home" 
                   className='nav-link'

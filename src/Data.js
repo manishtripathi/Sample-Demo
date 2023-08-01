@@ -29,6 +29,25 @@ const Data={
         name:"mobility scooter",
         products:61000
     },
+    ],
+
+    SliderData: [
+        {
+            image:"/images/slider1.jpg",
+            alt: "Slider1"
+           
+        },
+            {
+            image:"/images/Slider2.jpg",
+            alt: "Slider2"
+            
+        },
+            {
+            image: "/images/Slider3.jpg",
+            alt: "Slider3"
+            
+        }           
+       
     ]
 };
 export default Data;

@@ -2,21 +2,23 @@ import React, { useEffect, useState } from 'react'
 import Data from './Data'
 import { Nav, Navbar } from 'react-bootstrap';
 import { FaAlignLeft, FaWhmcs, FaCloudRain } from "react-icons/fa"
+import SliderBanner from './Slider';
 const Home = () => {
     const [show, setshow] = useState({
         category: false,
     });
-    const [categories,setcategories]=useState([]);
+    //const [categories,setcategories]=useState([]);
     const [items,setitems]=useState([]);
     useEffect(()=>{
-        setcategories(Data.categories);
+        //setcategories(Data.categories);
         setitems(Data.items);
     },[])
   return (
     <div>
       <div className='home-container'>
         <div className='categories'>
-            <h2>categories</h2>
+
+            <h4><FaAlignLeft /> categories</h4>
             <Navbar className='d-block'>
                 <Nav.Link 
                 className='pb-1 pt-1'
@@ -30,15 +32,21 @@ const Home = () => {
                                                 onMouseEnter={() => setshow((pre) => { return { ...pre, category: true } })}
                                                 onMouseLeave={() => setshow(false)}>
                                                 <Navbar className="d-block px-3">
+                                                    <h4>Agriculture Machine</h4>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
+                                                    <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
+                                                    <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
+                                                    <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
+                                                    <h4>Plastic and Wood working machine</h4>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                 </Navbar>
                                                 <Navbar className="d-block px-3">
+                                                <h4>Agriculture Machine</h4>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
                                                     <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
@@ -68,10 +76,8 @@ const Home = () => {
         </div>
         <div className='home-body'>
             <div className='home-body-container'>
-                <h1>recommended <br/>suppliers</h1>
-                <h5>A wide selection of top-quality <br/>
-                    products across all categories</h5>
-                    <button className='btn btn-primary'>view more</button>
+                <SliderBanner/>
+                
             </div>
         </div>
         <div className='home-items'>
