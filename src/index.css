@@ -104,7 +104,7 @@ cursor: pointer;
   background-color: white;
   width: max-content;
   right: 2px;
-  top: 42px;
+  top: 50px;
   border-radius: 6px;
   box-shadow: #9b9090 0 0 6px 0px;
   z-index: 9;
@@ -217,6 +217,19 @@ p{
   text-align: justify;
   padding: 1% 1% 2% 10%;
   text-transform: capitalize;
+  top: 45px;
+}
+.catghome{
+  left: 325px;
+  top: -25px;
+  border-radius: 0px 0px 10px 10px;
+}
+.categories2{
+  border-radius: 0px 0px 10px 10px;
+}
+.first-section .navbar a.catgbtn:hover{
+  background: #fff;
+    box-shadow: 1px -1px 5px 0px #00000087;
 }
 .categories p{
   cursor: pointer;

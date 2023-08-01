@@ -36,7 +36,7 @@ const Navigation = () => {
              
               <Navbar.Toggle aria-controls="basic-navbar-nav" />
 
-              <Navbar.Collapse id="basic-navbar-nav">
+              <Navbar.Collapse id="basic-navbar-nav justify-content-end">
                 <Nav className="me-auto custome-space">
                   <Link 
                   to="/home" 
