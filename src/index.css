@@ -299,6 +299,9 @@ h4{
 small.txt-color {
   color: #a79898;
 }
+.brand-logo{
+  width: 250px;
+}
 .image{
   width: 60px;
   margin-right: 10px;

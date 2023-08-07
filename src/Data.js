@@ -1,6 +1,73 @@
 const Data={
     categories:[
-        " manufacturing &processing machinery", "consumer electronics","industrial equipments & components","electrical &electronics","construction & decoration","light industry &daily use","auto motorcycle parts & accessories","apparel & accessories"
+        {
+            name: " Manufacturing & processing machinery",
+            child: [
+                {
+                    name: "Agriculure Machiner",
+                },
+                {
+                    name: "Live Sock Machineries",
+                },
+                {
+                    name: "Feed Processing Machineries",
+                },
+                {
+                    name: "Tiller",
+                },
+                {
+                    name: "Harvesting",
+                },
+            ]
+    },
+        {
+            name: "Consumer electronics",
+            child: [
+                {
+                    name: "Agriculure Machiner",
+                },
+                {
+                    name: "Live Sock Machineries",
+                },
+                {
+                    name: "Feed Processing Machineries",
+                },
+                {
+                    name: "Tiller",
+                },
+                {
+                    name: "Harvesting",
+                },
+            ]
+    },
+        {
+            name: "Industrial equipments & components",
+            child: [
+                {
+                    name: "Agriculure Machiner",
+                },
+                {
+                    name: "Live Sock Machineries",
+                },
+                {
+                    name: "Feed Processing Machineries",
+                },
+                {
+                    name: "Tiller",
+                },
+                {
+                    name: "Harvesting",
+                },
+            ]
+    
+    },
+        {name: "Electrical &electronics"},
+        {name: "Construction & decoration"},
+        {name: "Light industry & daily use"},
+        {name: "Auto motorcycle parts & accessories"},
+        {name: " manufacturing &processing machinery"},
+        {name: "Apparel & accessories"},
+        
     ],
 
     items:[

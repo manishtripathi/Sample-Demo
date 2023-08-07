@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 // import SearchIcon from '@mui/icons-material/Search';
 import { Link } from 'react-router-dom';
 import { FaCamera } from 'react-icons/fa';
+import Logo from '../src/images/logo_pc.png';
 import { Navbar, Nav, NavDropdown, Button, InputGroup, Form, Container, Dropdown, DropdownButton } from 'react-bootstrap';
 const Navigation = () => {
     const [disp,setdisp]=useState("none");
@@ -16,7 +17,7 @@ const Navigation = () => {
       <Navbar expand="lg" className='bgwht'>
             <Container fluid>
               
-              <Navbar.Brand href="#home">MADE IN CHINA</Navbar.Brand>
+              <Navbar.Brand href="#home" className='brand-logo'><img src={Logo} alt='logo' className='img-fluid' /> </Navbar.Brand>
              
               <InputGroup className='search-container'>
               <Form.Select aria-label="Default select example">
