@@ -4,76 +4,59 @@ import { Nav, Navbar } from 'react-bootstrap';
 import { FaAlignLeft, FaCloudRain } from "react-icons/fa"
 import SliderBanner from './Slider';
 const Home = () => {
-    const [show, setshow] = useState({
-        category: false,
-    });
+    const [hoveredCategory, setHoveredCategory] = useState(null);
     const [categories, setcategories] = useState([]);
     const [items, setitems] = useState([]);
-    const [child, setchild] = useState([]);
+
     useEffect(() => {
         setcategories(Data.categories);
         setitems(Data.items);
-        setchild(Data.child);
-    }, [])
+    }, []);
     return (
         <div>
             <div className='home-container'>
                 <div className='categories'>
 
                     <h4><FaAlignLeft /> categories</h4>
-                    
+
                     <Navbar className='d-block'>
-                        {categories.map((val, index) => {
+                        {categories.map((category, index) => {
                             return (
-                            <>
-                                <Nav.Link
-                            className='pb-1 pt-1'
-                            onMouseEnter={() => setshow((pre) => { return { ...pre, category: true } })}
-                            onMouseLeave={() => setshow(false)}
-                        > 
-                            {val.name}
-                            {show.category ?
                                 <>
-                                    <div className='catghome sub-menu d-flex '
-
-                                        onMouseEnter={() => setshow((pre) => { return { ...pre, category: true } })}
-                                        onMouseLeave={() => setshow(false)}>
-                                        <Navbar className="d-block px-3">
-
-                                            <h4>Agriculture Machine</h4>
-                                            {child.map((val, index)=>{
-                                                return (
-                                                    <>
-                                                    <Nav.Link className="py-2">{val.name}</Nav.Link>
-                                                    </>
-                                                )
-                                                
-                                            })}
-                                            
-                                            
-                                            <h4>Plastic and Wood working machine</h4>
-                                            <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
-                                           
-                                        </Navbar>
-                                        <Navbar className="d-block px-3">
-                                            <h4>Agriculture Machine</h4>
-                                            <Nav.Link className="py-2"> <FaCloudRain /> Agriculture And Food</Nav.Link>
-                                            
-                                        </Navbar>
-
-                                    </div>
+                                    <Nav.Link
+                                        className='pb-1 pt-1'
+                                        onMouseEnter={() => setHoveredCategory(category)}
+                                         onMouseLeave={() => setHoveredCategory(null)}
+                                    >
+                                        {category.name}
+                                        {hoveredCategory === category && category.child && ( // Check if val.child exists
+                    <div className='catghome sub-menu d-flex'>
+                        <Navbar className='d-block px-3'>
+                        <div className='sub-menucategories'>
+                            {category.child.map((subval, subIndex) => {
+                                return (
+                                    <>
+                                   
+                                <h4>{subval.title}</h4>
+                                <Nav.Link key={subIndex} className='py-1'>
+                                    {subval.name}
+                                </Nav.Link>
+                               
                                 </>
-                                : <></>
-                            }
+                            )})}
+                            </div>
+                        </Navbar>
+                    </div>
+                )}
 
-                        </Nav.Link>
-                            </>
+                                    </Nav.Link>
+                                </>
                             )
                         })
 
                         }
-                        
-                       
+
+
 
                     </Navbar>
 

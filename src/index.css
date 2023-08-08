@@ -223,12 +223,16 @@ p{
   top: 45px;
 }
 .catghome{
-  left: 325px;
-  top: -58px;
+  left: 311px;
+  top: -42px;
   border-radius: 0px 0px 10px 10px;
 }
 h4{
   font-size: 1.1rem !important;
+}
+.sub-menucategories {
+  column-count: 3; /* Set the desired number of columns */
+  column-gap: 10px; /* Adjust the gap between columns */
 }
 .categories2{
   border-radius: 0px 0px 10px 10px;
